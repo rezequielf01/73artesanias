@@ -3,7 +3,7 @@
     --color-secundario: #0c0c0c;
 }
 .body{
-    background: #f1f1f1;
+    background: #e9e9e9;
     font-family: 'Courier New', Courier, monospace;
 }
 .separador{
@@ -31,6 +31,9 @@
     text-align: center;
     background: radial-gradient(var(--color-secundario) 50%,black);
     box-shadow: 0 0 10px black;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 .header__a{
     text-decoration: none;
@@ -209,6 +212,7 @@
     box-shadow: 0 0 10px black;
     z-index: 5;
     position: relative;
+    margin-top: 130px;
 }
 .hero-bg{
     width: 100%;
@@ -219,8 +223,8 @@
 .hero-bg__img{
     width: 100%;
     height: 100%;
-    opacity: .07;
-    background: url(https://rezequielf01.github.io/73artesanias/imagenes/atrapasuenos.jpg);
+    opacity: .09;
+    background: url(/imagenes/atrapasuenos.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -228,11 +232,19 @@
 }
 .hero-carousel{
     z-index: 15;
+    height: fit-content;
 }
 .carousel-wrapp{
     max-width: 100%;
     max-height: 500px;
     padding: 25px 0;
+}
+.carousel-card1{
+    width: 80%;
+    height: 500px;
+    display: flex;
+    margin: auto;
+    border-radius: 12px;
 }
 .carousel-card{
     width: 80%;
@@ -253,9 +265,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
+}
+.carousel-img__img1{
+    width: 100%;
+    height: 100%;
 }
 .carousel-img__img{
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 .carousel-card__img{
@@ -263,11 +280,51 @@
     height: 100%;
     box-shadow: 0 0 5px black;
 }
+/* carousel-card1 */
+.carousel-card__p1, .carousel-card__p{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    width: 100%;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.carousel-card__a{
+    text-decoration: none;
+    color: var(--color-primario);
+    background: var(--color-secundario);
+    line-height: 60px;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 2rem;
+    box-shadow: 0 0 5px black;
+}
+
+.anim-flotar{
+    animation: anim-flotar 2.3s infinite ease backwards;
+    top: 0;
+    position: relative;
+}
+
+@keyframes anim-flotar {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0;
+    }
+  }
 
 
 /* MAIN */
 .main{
-    width: 100%;
+    max-width: 100%;
     height: auto;
     margin: auto;
     display: flex;
@@ -275,146 +332,268 @@
     gap: 80px;
 }
 
-/* DESTACADO-SECTION */
-.destacado-section{
+/* ATRAPASUEÑOS-SECTION */
+.articulos-section{
     width: 80%;
     height: auto;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-}
-.destacado-articulos-contenedor{
-    display: flex;
-    row-gap: 50px;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    align-items: center;
-}
-.destacado__icon{
-    width: 35px;
-}
-.destacado-wrapp{
-    width: 100%;
-    height: auto;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-    background: transparent;
 }
-.destacado-card{
-    width: 250px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    background: url(https://rezequielf01.github.io/73artesanias/imagenes/bg4.png);
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    transition: all .2s ease-in-out;
-    padding: 10px;
+.articulos__titulo{
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+.articulos__titulo-img{
+    width: 50px;
     position: relative;
-    z-index: 20;
+    top: 15px;
 }
-.destacado-card-img{
-    max-width: 100%;
-    height: 75%;
-    border-radius: 5px;
-    display: flex;
-}
-.destacado-card__img{
-    width: 100%;
-    height: 100%;
-    margin: auto;
-}
-.destacado-card-info{
-    max-width: 100%;
-    height: 20%;
-    color: var(--color-primario);
+.articulos-wrapp{
     padding: 10px;
 }
-.destacado-card-bx1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.destacado-card__h3{
-    margin: 0;
-}
-.destacado-card__h4{
-    margin-top: 10px;
-}
-.destacado-card-wsp{
-    width: 100%;
-    height: 25px;
-    padding: 5px;
-}
-.destacado-card__wsp{
-    background: rgb(79, 245, 79);
-    width: 80%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
+.articulo-card{
+    width: 225px;
+    height: 500px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow .3s ease-in-out;
     margin: auto;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
 }
-
-.atrapasueños__h2, .destacado__h2{
+.articulo-card:hover{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, .8);
+}
+.articulo-card-img:hover .articulo-card__ojo{
+    opacity: 1;
+}
+.articulo-card__img:hover{
+    transform: scale(1.2);
+}
+.articulo-card-img{
+    width: 100%;
+    height: 65%;
+    position: relative;
+    overflow: hidden;
+}
+.articulo-card__img{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+.articulo-card__ojo{
+    color: var(--color-primario);
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+.articulo-card-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 35%;
+    justify-content: space-between;
+    position: relative;
+}
+.articulo-card__nombre{
+    margin: 0;
+    padding: 5px;
     letter-spacing: 1px;
     text-transform: uppercase;
-}
-
-/* ATRAPASUEÑOS-SECTION */
-.atrapasueños-section{
-    width: 100%;
-    height: 520px;
-    background: url(https://rezequielf01.github.io/73artesanias/imagenes/bg3.png);
-    background-position-y: -10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.atrapasueños__h2{
-    color: var(--color-primario);
     text-align: center;
 }
-.atrapasueños-card{
-    width: 250px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    background: transparent;
-    backdrop-filter: blur(0.05rem);
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    transition: all .2s ease-in-out;
-    padding: 10px;
-}
-.atrapasueños-card-wsp{
-    height: 25px;
+.articulo-card__precio{
     padding: 5px;
-    border-radius: 5px;
+    font-weight: bold;
 }
-.atrapasueños-card__wsp{
-    background: rgb(79, 245, 79);
-    width: 22%;
+.articulo-card__desc{
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.articulo-card-estrellas{
+    padding: 5px;
+    color: orange;
+}
+.articulo-card__comprar{
+    width: 100%;
+    background: rgb(62, 248, 62);
+    display: flex;
+    border-radius: 0 0 12px 12px;
+    text-decoration: none;
+}
+.articulo-card__wsp{
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    padding: 5px;
+}
+
+/* PORTAMACETA - SECTION */
+.articulos-contenedor{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+.articulo2-card{
+    width: 250px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 10;
+    background: #f1f1f1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.articulo2-card:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.articulo2-img{
+    width: 100%;
     height: 100%;
+    z-index: 20;
+    position: relative;
+}
+.articulo2-img__img{
+    width: 100%;
+}
+.articulo2-info{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 35;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.articulo2-card:hover .articulo2-info{
+    opacity: 1;
+}
+.articulo2-info__precio{
+    width: 50%;
+    height: 50px;
+    color: var(--color-primario);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 35;
+    background: var(--color-secundario);
+    border-bottom-right-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.articulo2-card__comprar,
+.articulo2-card__wsp{
+    width: 100%;
+    top: 233px;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(to top, rgb(62, 248, 62) 60%, transparent);
+}
+.articulo2-card__comprar{
+    width: 100%;
+    display: flex;
+    border-radius: 0 0 12px 12px;
     text-decoration: none;
-    color: white;
+    
+}
+.articulo2-card__wsp{
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    text-align: center;
     margin: auto;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    padding: 5px;
+}
+
+/* LLAMADORES - SECTION */
+
+
+/* REDES-SIDEBAR */
+.redes-menu{
+    width: 60px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: -36px;
+    transition: left 0.3s ease-in-out;
+}
+.redes-menu-on{
+    left: 0;
+}
+.redes-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    justify-content: space-around;
+    text-decoration: none;
+    background: var(--color-secundario);
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 0 0 5px black;
+}
+.redes-box2{
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    display: flex;
+    border-radius: 0px 12px 12px 0px;
+    color: var(--color-secundario);
+    box-shadow: 0 0 5px var(--color-primario);
+    background: var(--color-primario);
+    padding: 3px;
+    box-shadow: 0 0 5px black;
+}
+.redes-box2__arrow{
+    transition: transform 0.3s ease;
+}
+.redes-box2-flip{
+    transform: rotate(180deg);
+}
+.redes-box__link{
+    text-decoration: none;
+}
+.redes-box__fb{
+    color: white;
+    background: #0055ff;
+    padding: 5px;
     border-radius: 5px;
+    box-shadow: 0 0 5px #0055ff;
+}
+.redes-box__ig{
+    color: white;
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #d9317a;
 }
 
 /* footer */
@@ -425,10 +604,21 @@
     display: flex;
     align-items: center;
     margin-top: 50px;
+    text-align: center;
 }
 .footer__p{
     margin: auto;
     color: #f1f1f1;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1280px){
+    .articulos-section{
+        width: 100%;
+    }
+    .articulo2-info{
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1024px){
@@ -437,6 +627,7 @@
         justify-content: space-around;
         height: 100px;
         flex-direction: row;
+
     }
     .header__h1{
         font-size: 1.8rem;
@@ -465,5 +656,35 @@
     }
     .nav-btn{
         display: inline-block;
+    }
+
+    /* HERO */
+    .hero-contenedor{
+        height: 500px;
+    }
+    .carousel-wrapp{
+        max-width: 100%;
+        max-height: 400px;
+        padding: 25px 0;
+    }
+    .carousel-card1{
+        width: 80%;
+        height: 400px;
+        display: flex;
+        margin: auto;
+        border-radius: 12px;
+    }
+    .carousel-card{
+        width: 80%;
+        height: 400px;
+        display: flex;
+        margin: auto;
+    }
+    .carousel-img{
+        width: 70%;
+    }
+    /* PORTA-MACETA RESPONSIVE */
+    .articulos-contenedor {
+        justify-content: space-around;
     }
 }

@@ -66,7 +66,7 @@
     font-size: 30px;
     line-height: 1;
     opacity: 1;
-    color: rgb(255, 187, 0);
+    color: rgb(0, 0, 0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: .5s ease-in-out;
@@ -79,11 +79,11 @@
 
 .slick-prev
 {
-    left: -30px;
+    left: -45px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -30px;
+    right: -45px;
     left: auto;
 }
 .slick-prev:before
@@ -97,12 +97,12 @@
 
 .slick-next
 {
-    right: -25px;
+    right: -35px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -25px;
+    left: -35px;
 }
 .slick-next:before
 {
@@ -200,7 +200,7 @@
     text-align: center;
 
     opacity: .35;
-    color: #0c0c0c;
+    color: #c97900;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -208,5 +208,5 @@
 .slick-dots li.slick-active button:before
 {
     opacity: 1;
-    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.648);
 }

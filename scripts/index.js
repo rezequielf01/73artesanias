@@ -13,6 +13,17 @@ navBtn.addEventListener("click", () => {
     }
   });
 
+  // REDES-MENU
+  const redesMenu = document.querySelector(".redes-menu");
+  const redesBox2 = document.querySelector(".redes-box2");
+  const redesArrow = document.querySelector(".redes-box2__arrow")
+
+  redesBox2.addEventListener("click", () =>{
+    redesMenu.classList.toggle("redes-menu-on");
+    redesArrow.classList.toggle("redes-box2-flip");
+  });
+
+
 $('.hero-carousel').slick({
     dots: true,
     infinite: true,
@@ -51,15 +62,59 @@ $('.hero-carousel').slick({
     ]
   });
 
-  $('.productos-carousel').slick({
+  $('.carousel-articulos').slick({
     dots: true,
     infinite: false,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 931,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+
+  $('.atrapasueños-carousel').slick({
+    dots: true,
+    infinite: false,
+    arrows: true,
+    autoplay: true,
     autoplaySpeed: 7000,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     responsive: [
       {
         breakpoint: 1024,
@@ -88,51 +143,4 @@ $('.hero-carousel').slick({
       // settings: "unslick"
       // instead of a settings object
     ]
-  });
-
-
-  $('.atrapasueños-carousel').slick({
-    dots: true,
-    infinite: false,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 7000,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
-
-// FANCYBOX
-
-  $('[data-fancybox="gallery"]').fancybox({
-    AnimationEffect : "slide",
-    transitionEffect: "circular"
   });
