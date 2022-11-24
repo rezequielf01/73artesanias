@@ -28,7 +28,7 @@ $('.hero-carousel').slick({
     dots: true,
     infinite: true,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -73,7 +73,7 @@ $('.hero-carousel').slick({
     slidesToScroll: 4,
     responsive: [
       {
-        breakpoint: 1025,
+        breakpoint: 1201,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -82,7 +82,16 @@ $('.hero-carousel').slick({
         }
       },
       {
-        breakpoint: 931,
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 769,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -91,7 +100,7 @@ $('.hero-carousel').slick({
         }
       },
       {
-        breakpoint: 650,
+        breakpoint: 577,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
