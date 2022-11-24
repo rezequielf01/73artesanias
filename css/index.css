@@ -618,12 +618,14 @@
         justify-content: space-around;
         height: 100px;
         flex-direction: row;
-
     }
     .header__h1{
         font-size: 1.8rem;
     }
     .separador{
+        display: none;
+    }
+    .nav{
         display: none;
     }
     .nav__ul{
