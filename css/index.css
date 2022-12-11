@@ -814,6 +814,7 @@ html{
     }
     .articulos-contenedor {
         gap: 25px 0;
+        flex-direction: column;
     }
     .articulo__titulo{
         margin: 30px auto;
