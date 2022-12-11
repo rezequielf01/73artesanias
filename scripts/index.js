@@ -1,6 +1,7 @@
 // NAV BTN
 const navMenu = document.querySelector(".nav__ul");
 const navBtn = document.querySelector(".nav-btn");
+const navLink = document.querySelector(".nav__li-a");
 
 navBtn.addEventListener("click", () => {
     navMenu.classList.toggle("nav__menu-responsive");
@@ -28,8 +29,9 @@ $('.hero-carousel').slick({
     dots: true,
     infinite: true,
     arrows: false,
-    autoplay: false,
-    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
@@ -67,7 +69,7 @@ $('.hero-carousel').slick({
     infinite: false,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 9000,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
