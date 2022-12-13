@@ -225,7 +225,7 @@ html{
     width: 100%;
     height: 100%;
     opacity: .09;
-    background: url(https://rezequielf01.github.io/73artesanias/imagenes/atrapasuenos.jpg);
+    background: url(/imagenes/atrapasuenos.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -239,6 +239,10 @@ html{
     max-width: 100%;
     max-height: 500px;
     padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .carousel-card1{
     width: 80%;
@@ -350,11 +354,19 @@ html{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 25px 0 10px ;
 }
-.producto{
+.producto-wrapp{
     width: 250px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.producto{
+    width: 100%;
     height: 350px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -381,8 +393,7 @@ html{
     text-align: center;
     position: relative;
     font-size: large;
-    font-weight: 600;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     color: var(--color-secundario);
 }
 .producto-btn{
@@ -402,6 +413,8 @@ html{
     padding: 5px;
     color: #f1f1f1;
     font-size: 1.2rem;
+    border-right: solid 1px black;
+    transition: transform .5s ease;
 }
 .producto-btn__eye{
     width: 50%;
@@ -411,6 +424,7 @@ html{
     padding: 5px;
     color: black;
     font-size: 1.2rem;
+    transition: transform .5s ease;
 }
 .producto:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
@@ -419,6 +433,16 @@ html{
 .producto:hover .producto-btn{
     transition: all .3s ease-in-out;
     bottom: 0;
+}
+.producto-btn__wsp:active{
+    transform: scale(1.2);
+    background: rgb(15, 211, 15);
+    color: var(--color-secundario);
+}
+.producto-btn__eye:active{
+    transform: scale(1.2);
+    background: #ffd82d;
+    color: var(--color-secundario);
 }
 .ver-mas{
     width: fit-content;
@@ -452,7 +476,7 @@ html{
 .porta-maceta-bg{
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://rezequielf01.github.io/73artesanias/imagenes/porta-maceta-bg.jpg) no-repeat center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/porta-maceta-bg.jpg) no-repeat center / cover;
     background-attachment: fixed;
     filter: blur(0.05rem);
     position: relative;
@@ -698,24 +722,6 @@ html{
         transition: all .3s ease-in-out;
         bottom: 0;
     }
-    .producto-btn__wsp{
-        border-right: solid 1px black;
-    }
-    .producto-btn__wsp,
-    .producto-btn__eye{
-        transition: transform .3s ease;
-        font-size: 1.3rem;
-    }
-    .producto-btn__wsp:active{
-        transform: scale(1.1);
-        background: rgb(15, 211, 15);
-        color: var(--color-secundario);
-    }
-    .producto-btn__eye:active{
-        transform: scale(1.1);
-        background: #ffd82d;
-        color: var(--color-secundario);
-    }
     .articulo__titulo{
         margin-left: 50px;
     }
@@ -753,32 +759,59 @@ html{
     .producto{
         width: 250px;
         height: 350px;
-}   }
+    }
+}
 
 @media (max-width: 481px){
+    .header{
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 0;
+    }
+    .separador{
+        display: none;
+    }
+    .nav-btn{
+        display: block;
+    }
+    .nav__ul{
+        position: absolute;
+        background: var(--color-secundario);
+        left: -120%;
+        top: 80px;
+        width: 100%;
+        padding: 25px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+    }
+    .nav__menu-responsive{
+        left: 0;
+    }
     .separador{
         padding: 0;
         margin: 0;
-    }
-    .header{
-        height: 80px;
     }
     .header__span{
         font-size: 1.5rem;
         padding-top: 10px;
     }
-    .nav__ul{
-        gap: 15px;
-    }
     .nav__button{
-        width: 152px;
+        width: fit-content
     }
     .nav__button-span{
         font-size: .8rem;
     }
     .hero-contenedor{
         height: 80vh;
-        margin-top: 100px;
+        margin-top: 80px;
     }
     .carousel-wrapp{
         width: 100%;
@@ -810,21 +843,21 @@ html{
         margin-left: 5px;
     }
     .porta-maceta-section{
-        scroll-margin-top: 100px;
+        scroll-margin-top: 80px;
     }
     .producto{
         width: 200px;
-        height: 320px
+        height: 320px;
     }
     .articulos-contenedor {
         gap: 25px 0;
-        flex-direction: column;
     }
     .articulo__titulo{
         margin: 30px auto;
     }
     .articulo__parrafo{
         text-align: center;
+        margin: 0 auto;
     }
     .envios-section{
         flex-direction: column;
@@ -835,6 +868,26 @@ html{
     }
     .envios__img{
         width: 50%;
+    }
+}
+
+@media (max-width: 381px){
+    .carousel-card__p,
+    .carousel-card__p1{
+        font-size: 1.5rem;
+        line-height: normal;
+    }
+    .carousel-img{
+        display: none;
+    }
+    .producto__precio{
+        font-size: 1.1rem;
+    }
+    .articulo__titulo2{
+        font-size: 1.5rem;
+    }
+    .articulo__parrafo2{
+        font-size: 1.2rem;
     }
 }
 
