@@ -25,44 +25,17 @@ navBtn.addEventListener("click", () => {
   });
 
 
-$('.hero-carousel').slick({
-    dots: true,
+
+  $('.hero-carousel').slick({
     infinite: true,
+    dots: true,
     arrows: false,
-    autoplay: true,
-    autoplaySpeed: 7000,
-    speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+    slidesToScroll: 1
+  });
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
-    ]
-  });
 
   $('.carousel-articulos').slick({
     dots: true,

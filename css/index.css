@@ -27,7 +27,7 @@ html{
 .header {
     width: 100%;
     padding: 10px 0;
-    height: auto;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -209,110 +209,54 @@ html{
 /* HERO-SECTION */
 .hero-contenedor{
     width: 100%;
-    height: 600px;
-    background-color: var(--color-primario);
-    box-shadow: 0 0 10px black;
-    z-index: 5;
-    position: relative;
+    height: 60vh;
+    background: radial-gradient(#feae24dc 10%,var(--color-primario) 70% 100%), url(/imagenes/atrapasuenos.jpg) no-repeat center / cover;
     margin-top: 120px;
-}
-.hero-bg{
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    position: absolute;
-}
-.hero-bg__img{
-    width: 100%;
-    height: 100%;
-    opacity: .09;
-    background: url(/imagenes/atrapasuenos.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    margin: 120px auto 0;
 }
-.hero-carousel{
-    z-index: 15;
-}
-.carousel-wrapp{
+.hero-capa{
     width: 100%;
-    height: 600px;
-    padding: 25px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.carousel-card1{
-    width: 80%;
-    height: 500px;
-    display: flex;
-    margin: auto;
-    border-radius: 12px;
+    height: 100%;
+    background: #feae24;
+    position: relative;
 }
 .carousel-card{
-    width: 80%;
-    height: 500px;
-    display: flex;
-    margin: auto;
-}
-.carousel-info{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.carousel-img{
-    width: 50%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
-}
-.carousel-img__img1{
     width: 100%;
-    height: 100%;
+    height: 60vh;
 }
-.carousel-img__img{
-    width: 100%;
-    height: 100%;
-}
-.carousel-card__img{
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 5px black;
-}
-/* carousel-card1 */
-.carousel-card__p1, .carousel-card__p{
-    font-size: 2.5rem;
-    font-weight: bold;
-    font-family: 'Dancing Script', cursive;
-    width: 100%;
-    margin: auto;
-    text-transform: uppercase;
+.carousel-card__p{
     letter-spacing: 1px;
+    font-weight: bold;
     text-align: center;
+    width: 30%;
+    font-size: 4rem;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 0 0 3px white;
 }
 .carousel-card__a{
+    letter-spacing: normal;
     text-decoration: none;
     color: var(--color-primario);
     background: var(--color-secundario);
-    line-height: 60px;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 12px;
-    text-align: center;
     font-size: 2rem;
-    box-shadow: 0 0 5px black;
+    text-shadow: none;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
 }
-
+.carousel-card__img{
+    width: 30%;
+}
 /* MAIN */
 .main{
+    margin-top: 30px;
     width: 100%;
     height: auto;
-    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -663,35 +607,19 @@ html{
 
     /* HERO */
     .hero-contenedor{
-        height: 500px;
-    }
-    .carousel-wrapp{
-        max-width: 100%;
-        max-height: 400px;
-        padding: 25px 0;
-    }
-    .carousel-card1{
-        width: 80%;
-        height: 400px;
-        display: flex;
-        margin: auto;
-        border-radius: 12px;
+        height: 70vh;
     }
     .carousel-card{
-        width: 80%;
-        height: 400px;
-        display: flex;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
+        height: 70vh;
     }
-    .carousel-card__p1,
     .carousel-card__p{
-        line-height: 50px;
+        width: 40%;
+        font-size: 3.5rem;
     }
-    .carousel-img{
-        width: 50%;
+    .carousel-card__img{
+        width: 40%;
     }
+
     .articulos-section{
         width: 90%;
     }
@@ -744,8 +672,12 @@ html{
 }
 
 @media (max-width: 768px){
-    .carousel-wrapp{
-        padding: 0;
+    .carousel-card{
+        height: 70vh;
+    }
+    .carousel-card__p{
+        width: 40%;
+        font-size: 3rem;
     }
     .nav__button-span{
         font-size: 1rem;
@@ -810,37 +742,20 @@ html{
         font-size: .8rem;
     }
     .hero-contenedor{
-        height: 80vh;
         margin-top: 80px;
     }
-    .carousel-wrapp{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 80px;
-    }
-    .carousel-card,
-    .carousel-card1{
-        width: 100%;
+    .carousel-card{
         flex-direction: column;
     }
-    .carousel-info{
-        width: 80%;
-        height: 50%;
-        margin: auto;
-    }
-    .carousel-card__p1,
     .carousel-card__p{
-        width: 100%;
-        text-align: center;
-        margin: auto;
+        width: 90%;
+        font-size: 2rem;
+    }
+    .carousel-card__img{
+        width: 80%;
     }
     .carousel-card__a{
-        font-size: 1.5rem;
-        padding: 5px 10px;
-        margin-left: 5px;
+        font-size: 1.2rem;
     }
     .porta-maceta-section{
         scroll-margin-top: 80px;
@@ -872,8 +787,7 @@ html{
 }
 
 @media (max-width: 381px){
-    .carousel-card__p,
-    .carousel-card__p1{
+    .carousel-card__p{
         font-size: 1.5rem;
         line-height: normal;
     }
