@@ -42,6 +42,7 @@ html{
     text-decoration: none;
 }
 .header__span {
+    font-weight: bold;
     color: var(--color-primario);
     font-family: 'Dancing Script', cursive;
     filter: drop-shadow(0px 0px 1px rgb(190, 0, 0));
@@ -225,7 +226,7 @@ html{
     width: 100%;
     height: 100%;
     opacity: .09;
-    background: url(https://rezequielf01.github.io/73artesanias/imagenes/atrapasuenos.jpg);
+    background: url(/imagenes/atrapasuenos.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,11 +234,10 @@ html{
 }
 .hero-carousel{
     z-index: 15;
-    height: fit-content;
 }
 .carousel-wrapp{
-    max-width: 100%;
-    max-height: 500px;
+    width: 100%;
+    height: 600px;
     padding: 25px 0;
     display: flex;
     justify-content: center;
@@ -476,7 +476,7 @@ html{
 .porta-maceta-bg{
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://rezequielf01.github.io/73artesanias/imagenes/porta-maceta-bg.jpg) no-repeat center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/porta-maceta-bg.jpg) no-repeat center / cover;
     background-attachment: fixed;
     filter: blur(0.05rem);
     position: relative;
@@ -757,8 +757,8 @@ html{
         margin: 0;
     }
     .producto{
-        width: 250px;
-        height: 350px;
+        width: 220px;
+        height: 320px;
     }
 }
 

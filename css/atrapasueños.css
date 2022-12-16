@@ -41,16 +41,15 @@ html{
 .header__a{
     text-decoration: none;
 }
-.header__h1 {
+.header__span {
+    font-weight: bold;
     color: var(--color-primario);
     font-family: 'Dancing Script', cursive;
-    filter: drop-shadow(2px 2px 1px #9e5f00);
+    filter: drop-shadow(0px 0px 1px rgb(190, 0, 0));
     padding: 0;
     margin: 0;
     transition: filter .3s ease-in-out;
-}
-.header__h1:hover{
-    filter: drop-shadow(0px 0px 1px rgb(190, 0, 0));
+    font-size: 2rem;
 }
 
 /* NAV */
@@ -211,27 +210,39 @@ html{
 .main{
     width: 100%;
     position: relative;
-    margin-top: 120px;
+    margin-top: 60px;
     z-index: 50;
-
-}
-.titulo{
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 .titulo__h1{
-
-}
-.main__titulo{
-    text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin-bottom: 50px;
 }
 .titulo__icon{
     position: relative;
     top: 20px;
     width: 50px;
+}
+.grid-contenedor{
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(3, 400px);
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 50px;
+}
+.producto-wrapp{
+    width: 250px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* ATRAPASUEÑOS - ARTICULOS */
@@ -338,6 +349,16 @@ html{
     transition: all .3s ease-in-out;
     bottom: 0;
 }
+.producto-btn__wsp:active{
+    transform: scale(1.2);
+    background: rgb(15, 211, 15);
+    color: var(--color-secundario);
+}
+.producto-btn__eye:active{
+    transform: scale(1.2);
+    background: #ffd82d;
+    color: var(--color-secundario);
+}
 
 /* REDES-SIDEBAR */
 .redes-menu{
@@ -420,3 +441,185 @@ html{
     color: #f1f1f1;
     letter-spacing: 1px;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1025px){
+    .grid-contenedor{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    .header{
+        align-items: center;
+        justify-content: space-around;
+        height: 100px;
+    }
+    .header__span{
+        font-size: 1.8rem;
+    }
+    .separador{
+        display: block;
+    }
+    .nav{
+        display: block;
+    }
+    .nav__button:active{
+        color: var(--color-secundario);
+        box-shadow: 0 0 15px var(--color-primario);
+    }
+    .nav__button:active .nav__button-icon{
+        display: block;
+        top: 0;
+        opacity: 1;
+    }
+    .nav__button:active::after{
+        top: 0;
+        left: 0;
+    }
+    .nav__button-span{
+        font-size: 1rem;
+    }
+    .nav__menu-responsive{
+        left: 0;
+    }
+    .nav-btn{
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px){
+    .carousel-wrapp{
+        padding: 0;
+    }
+    .nav__button-span{
+        font-size: 1rem;
+    }
+    .articulos-contenedor {
+        gap: 25px 50px;
+    }
+    .envios__p{
+        margin: 0;
+    }
+    .producto{
+        width: 220px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 481px){
+    .header{
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 0;
+    }
+    .separador{
+        display: none;
+    }
+    .nav-btn{
+        display: block;
+    }
+    .nav__ul{
+        position: absolute;
+        background: var(--color-secundario);
+        left: -120%;
+        top: 80px;
+        width: 100%;
+        padding: 25px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+    }
+    .nav__menu-responsive{
+        left: 0;
+    }
+    .separador{
+        display: none;
+    }
+    .header__span{
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+    .nav__button{
+        width: fit-content
+    }
+    .nav__button-span{
+        font-size: .8rem;
+    }
+    .hero-contenedor{
+        height: 80vh;
+        margin-top: 80px;
+    }
+    .carousel-wrapp{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+    }
+    .carousel-card,
+    .carousel-card1{
+        width: 100%;
+        flex-direction: column;
+    }
+    .carousel-info{
+        width: 80%;
+        height: 50%;
+        margin: auto;
+    }
+    .carousel-card__p1,
+    .carousel-card__p{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    .carousel-card__a{
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        margin-left: 5px;
+    }
+    .main{
+        margin-top: 40px;
+    }
+    .titulo__h1{
+        font-size: 1.5rem;
+    }
+    .titulo__icon{
+        top: 10px;
+        width: 40px;
+    }
+    .porta-maceta-section{
+        scroll-margin-top: 80px;
+    }
+    .articulos-contenedor {
+        gap: 30px 0;
+    }
+    .articulo__titulo{
+        margin: 30px auto;
+    }
+    .articulo__parrafo{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .envios-section{
+        flex-direction: column;
+    }
+    .envios__p{
+        width: 80%;
+        font-size: 2rem;
+    }
+    .envios__img{
+        width: 50%;
+    }
+}
+
