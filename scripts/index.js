@@ -1,3 +1,10 @@
+//LOADER
+window.onload = function (){
+  $("#preloader").fadeOut();
+  $("body").removeClass("hidden");
+}
+
+
 // NAV BTN
 const navMenu = document.querySelector(".nav__ul");
 const navBtn = document.querySelector(".nav-btn");
