@@ -305,7 +305,7 @@ html{
 .hero-contenedor{
     width: 100%;
     height: 60vh;
-    background: radial-gradient(#feae24dc 10%,var(--color-primario) 70% 100%), url(/imagenes/atrapasuenos.jpg) no-repeat center / cover;
+    background: radial-gradient(#feae24dc 10%,var(--color-primario) 70% 100%), url(https://rezequielf01.github.io/73artesanias/imagenes/atrapasuenos.jpg) no-repeat center / cover;
     margin-top: 120px;
     background-attachment: fixed;
     position: relative;
@@ -515,7 +515,7 @@ html{
 .porta-maceta-bg{
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/porta-maceta-bg.jpg) no-repeat center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://rezequielf01.github.io/73artesanias/imagenes/porta-maceta-bg.jpg) no-repeat center / cover;
     background-attachment: fixed;
     filter: blur(0.05rem);
     position: relative;
